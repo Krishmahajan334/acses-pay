@@ -267,25 +267,18 @@
             <div id="qrcode"></div>
         </div>
 
+        <div style="margin-bottom: 20px;">
+            <button class="app-btn btn-paytm" onclick="downloadQR()">
+                <i class="fa-solid fa-download"></i> Save QR Code to Gallery
+            </button>
+            <p style="font-size: 12px; color: var(--text-sub); margin-top: 8px;">
+                <i class="fa-solid fa-circle-info"></i> Open Paytm / GPay / PhonePe & tap <strong>"Scan from Gallery"</strong>
+            </p>
+        </div>
+
         <div class="btn-group">
-            <!-- Direct Paytm App Button -->
-            <a id="paytmDeepBtn" class="app-btn btn-paytm" href="#">
-                <i class="fa-solid fa-wallet"></i> Pay with Paytm
-            </a>
-
-            <!-- Direct PhonePe Intent -->
-            <a id="phonepeDeepBtn" class="app-btn btn-phonepe" href="#">
-                <i class="fa-solid fa-mobile-screen"></i> Pay with PhonePe
-            </a>
-
-            <!-- Direct Google Pay Intent -->
-            <a id="gpayDeepBtn" class="app-btn btn-gpay" href="#">
-                <i class="fa-brands fa-google-pay"></i> Pay with Google Pay
-            </a>
-
-            <!-- Universal UPI Choice -->
             <a id="universalUpiBtn" class="app-btn btn-generic" href="#">
-                <i class="fa-solid fa-qrcode"></i> Open Any UPI App
+                <i class="fa-solid fa-mobile-screen-button"></i> Try Direct App Intent
             </a>
         </div>
 
@@ -326,14 +319,36 @@
         document.getElementById('universalUpiBtn').href = upiStandardUrl;
 
         // Render Dynamic QR Code
-        new QRCode(document.getElementById("qrcode"), {
+        const qrcodeObj = new QRCode(document.getElementById("qrcode"), {
             text: upiStandardUrl,
-            width: 170,
-            height: 170,
+            width: 200,
+            height: 200,
             colorDark: "#000000",
             colorLight: "#ffffff",
-            correctLevel: QRCode.CorrectLevel.M
+            correctLevel: QRCode.CorrectLevel.H
         });
+
+        function downloadQR() {
+            setTimeout(() => {
+                const img = document.querySelector("#qrcode img") || document.querySelector("#qrcode canvas");
+                if (img) {
+                    const src = img.src || (img.toDataURL ? img.toDataURL("image/png") : null);
+                    if (src) {
+                        const a = document.createElement("a");
+                        a.href = src;
+                        a.download = `ACSES_Payment_QR_Rs${amount}.png`;
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        
+                        const toast = document.getElementById('toast');
+                        toast.innerText = "QR Image Saved to Gallery! Now open Paytm/GPay & scan it.";
+                        toast.classList.add('show');
+                        setTimeout(() => toast.classList.remove('show'), 3500);
+                    }
+                }
+            }, 100);
+        }
 
         // Copy UPI function
         function copyUPI() {
