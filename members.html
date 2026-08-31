@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members — ACSES DKTE</title>
+    <meta name="description" content="Meet the ACSES core team — leadership, technical, design, and events.">
+    <meta name="keywords"
+        content="ACSES, ACSES DKTE, Association of Computer Science and Engineering Students, DKTE Society's Textile and Engineering Institute, DKTE Tech Club, Computer Science Club, CSE Department Club, DKTE CSE, ASCES, ACCESS, ACSES Club, ASCES DKTE, ACSES TEI, ACSES DKTE freshers, Winter Hackathon, Hackathon DKTE, Cloud and DevOps Bootcamp, Competitive Programming Workshop, Coding Workshop, CP Workshop, Freshers Induction, Tech Events DKTE, Coding Competitions, Software Development, Tech Community, ACSES events, DKTE Hackathon, Krish Mahajan, Krish Mahajan ACSES, Krish Mahajan President, Gomtesh Patil, Gomtesh Patil ACSES, Gomtesh Patil Vice President, Renuka Balu Patil, Renuka Balu Patil ACSES, Renuka Balu Patil Secretary, Aryan Shetake, Aryan Shetake ACSES, Aryan Shetake Secretary, Radhika Patil, Radhika Patil ACSES, Radhika Patil Secretary, Parth Savale, Parth Savale ACSES, Parth Savale Treasurer, Shraddha Patil, Shraddha Patil ACSES, Shraddha Patil Treasurer, Niranjan Rendale, Niranjan Rendale ACSES, Niranjan Rendale Event Head, Sayali Bhosale, Sayali Bhosale ACSES, Sayali Bhosale Event Lead, Rajani Desai, Rajani Desai ACSES, Rajani Desai Event Lead, Atharv Ranmale, Atharv Ranmale ACSES, Atharv Ranmale Technical Head, Payal Channabasannavar, Payal Channabasannavar ACSES, Payal Channabasannavar Technical Head, Piyush Patil, Piyush Patil ACSES, Piyush Patil Technical Head, Anshika Sharma, Anshika Sharma ACSES, Anshika Sharma Social Media & Marketing Head, Teerthraj Patil, Teerthraj Patil ACSES, Teerthraj Patil Social Media & Marketing Head, Aryan Patil, Aryan Patil ACSES, Aryan Patil Social Media & Marketing Head, Bhargavi Subhash Ambi, Bhargavi Subhash Ambi ACSES, Bhargavi Subhash Ambi Data Manager, Mrunal Ajay Shevade, Mrunal Ajay Shevade ACSES, Mrunal Ajay Shevade Data Manager, Snehal Visapure, Snehal Visapure ACSES, Snehal Visapure Data Manager, Bhargavi Pujari, Bhargavi Pujari ACSES, Bhargavi Pujari Data Manager, CodeChef DKTE, CodeChef, DKTE Coding Club, DSA, Data Structures and Algorithms, Web Development, Student Chapter">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ACSES — Association of Computer Science & Engineering Students">
+    <meta property="og:description"
+        content="ACSES DKTE — The official tech club for computer science & engineering students.">
+    <meta property="og:image" content="assets/portal/images/logo.png">
+    <meta name="theme-color" content="#030712">
+    <link rel="icon" type="image/png" href="assets/portal/images/favicon.png">
+</head>
+
+<body>
+
+    <div id="circuitPattern"></div>
+    <div id="cursorGlow"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div id="loader">
+        <img src="assets/portal/images/logo.png" alt="ACSES Logo" class="loader-logo" style="height:44px; width:auto; object-fit:contain;">
+        <div class="loader-bar"><span id="loaderFill"></span></div>
+    </div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="scroll-progress"><span id="scrollFill"></span></div>
+
+    <header class="top">
+        <div class="top-inner">
+            <a class="brand" href="index.html"><img src="assets/portal/images/logo.png" alt="ACSES Logo"
+                    style="height:32px; width:auto; border-radius:6px; object-fit:contain;"></a>
+            <nav class="links" id="navLinks">
+                <a class="nav-link" data-page="index.html" href="index.html">Home</a>
+                <a class="nav-link" data-page="about.html" href="about.html">About</a>
+                <a class="nav-link" data-page="events.html" href="events.html">Events</a>
+                <a class="nav-link" data-page="gallery.html" href="gallery.html">Gallery</a>
+                <a class="nav-link" data-page="members.html" href="members.html">Members</a>
+                <a class="nav-link" data-page="contact.html" href="contact.html">Contact</a>
+                <span class="nav-pill" id="navPill" aria-hidden="true"></span>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu"
+                aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    <div class="drawer-scrim"></div>
+    <nav class="nav-drawer" id="navDrawer">
+        <a data-page="index.html" href="index.html">Home</a>
+        <a data-page="about.html" href="about.html">About</a>
+        <a data-page="events.html" href="events.html">Events</a>
+        <a data-page="gallery.html" href="gallery.html">Gallery</a>
+        <a data-page="members.html" href="members.html">Members</a>
+        <a data-page="contact.html" href="contact.html">Contact</a>
+        <a data-join-link target="_blank" rel="noopener" style="color:var(--circuit)">Join ACSES →</a>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <canvas class="page-header-canvas" data-scene="network" data-accent="amber"></canvas>
+        <div class="page-header-content">
+            <div class="eyebrow">Members</div>
+            <h1>The people behind ACSES</h1>
+            <p></p>
+            <div class="page-header-stats" id="headerStats"></div>
+        </div>
+    </header>
+
+    <!-- MEMBERS -->
+    <section id="members">
+        <div class="wrap">
+            <div class="eyebrow">Core team</div>
+            <h2 class="reveal3d">Member profiles</h2>
+
+            <div class="search-row">
+                <input class="search-input" id="memberSearch" type="text" placeholder="Search by name or role…">
+                <span class="result-count" id="resultCount"></span>
+            </div>
+            <div class="filter-row" id="deptChips"></div>
+
+            <div class="holo-team-grid">
+
+
+                <div class="holo-card card-amber-president">
+                    <div class="holo-avatar-box ring-amber">
+                        <img loading="lazy" src="assets/members/krish-mahajan.png" alt="Krish Mahajan" style="object-position: top;">
+                        <div class="radar-ring amber"></div>
+                    </div>
+                    <h3 class="member-name">Krish Mahajan</h3>
+                    <span class="member-title">President</span>
+
+                    <div class="social-bar">
+                        <a href="https://in.linkedin.com/in/krish-mahajan-617b50206" target="_blank" rel="noopener"
+                            class="s-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Krishmahajan334" target="_blank" rel="noopener" class="s-icon"
+                            aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.krishmahajan.dev/" target="_blank" rel="noopener" class="s-icon"
+                            aria-label="Portfolio"><i class="fa-solid fa-globe"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-blue-vp">
+                    <div class="holo-avatar-box ring-blue">
+                        <img loading="lazy" src="assets/members/gomtesh-patil.png" alt="Gomtesh Patil" style="object-position: top;">
+                        <div class="radar-ring blue"></div>
+                    </div>
+                    <h3 class="member-name">Gomtesh Patil</h3>
+                    <span class="member-title">Vice President</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-circuit-sec">
+                    <div class="holo-avatar-box ring-circuit">
+                        <img loading="lazy" src="assets/members/aryan-shetake.png" alt="Aryan Shetake" style="object-position: top;">
+                        <div class="radar-ring circuit"></div>
+                    </div>
+                    <h3 class="member-name">Aryan Shetake</h3>
+                    <span class="member-title">Secretary</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-circuit-sec">
+                    <div class="holo-avatar-box ring-circuit">
+                        <img loading="lazy" src="assets/members/renuka-patil.png" alt="Renuka Patil" style="object-position: top;">
+                        <div class="radar-ring circuit"></div>
+                    </div>
+                    <h3 class="member-name">Renuka Patil</h3>
+                    <span class="member-title">Secretary</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-circuit-sec">
+                    <div class="holo-avatar-box ring-circuit">
+                        <img loading="lazy" src="assets/members/radhika-patil.png" alt="Radhika Patil" style="object-position: top;">
+                        <div class="radar-ring circuit"></div>
+                    </div>
+                    <h3 class="member-name">Radhika Patil</h3>
+                    <span class="member-title">Secretary</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-amber-president">
+                    <div class="holo-avatar-box ring-amber">
+                        <img loading="lazy" src="assets/members/parth-savale.png" alt="Parth Savale" style="object-position: top;">
+                        <div class="radar-ring amber"></div>
+                    </div>
+                    <h3 class="member-name">Parth Savale</h3>
+                    <span class="member-title">Treasurer</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-amber-president">
+                    <div class="holo-avatar-box ring-amber">
+                        <img loading="lazy" src="assets/members/shraddha-patil.png" alt="Shraddha Patil"
+                            style="object-position: center 5%;">
+                        <div class="radar-ring amber"></div>
+                    </div>
+                    <h3 class="member-name">Shraddha Patil</h3>
+                    <span class="member-title">Treasurer</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-blue-vp">
+                    <div class="holo-avatar-box ring-blue">
+                        <img loading="lazy" src="assets/members/niranjan-rendale.png" alt="Niranjan Rendale"
+                            style="object-position: top;">
+                        <div class="radar-ring blue"></div>
+                    </div>
+                    <h3 class="member-name">Niranjan Rendale</h3>
+                    <span class="member-title">Event Head</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-blue-vp">
+                    <div class="holo-avatar-box ring-blue">
+                        <img loading="lazy" src="assets/members/sayali-bhosale.png" alt="Sayali Bhosale" style="object-position: top;">
+                        <div class="radar-ring blue"></div>
+                    </div>
+                    <h3 class="member-name">Sayali Bhosale</h3>
+                    <span class="member-title">Event Lead</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-blue-vp">
+                    <div class="holo-avatar-box ring-blue">
+                        <img loading="lazy" src="assets/members/rajani-desai.png" alt="Rajani Desai"
+                            style="object-position: center 20%;">
+                        <div class="radar-ring blue"></div>
+                    </div>
+                    <h3 class="member-name">Rajani Desai</h3>
+                    <span class="member-title">Event Lead</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-circuit-sec">
+                    <div class="holo-avatar-box ring-circuit">
+                        <img loading="lazy" src="assets/members/atharv-ranmale.png" alt="Atharv Ranmale" style="object-position: top;">
+                        <div class="radar-ring circuit"></div>
+                    </div>
+                    <h3 class="member-name">Atharv Ranmale</h3>
+                    <span class="member-title">Technical Head</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-circuit-sec">
+                    <div class="holo-avatar-box ring-circuit">
+                        <img loading="lazy" src="assets/members/payal-channabasannavar.png" alt="Payal Channabasannavar"
+                            style="object-position: top;">
+                        <div class="radar-ring circuit"></div>
+                    </div>
+                    <h3 class="member-name">Payal Channabasannavar</h3>
+                    <span class="member-title">Technical Head</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-circuit-sec">
+                    <div class="holo-avatar-box ring-circuit">
+                        <img loading="lazy" src="assets/members/piyush-patil.png" alt="Piyush Patil" style="object-position: top;">
+                        <div class="radar-ring circuit"></div>
+                    </div>
+                    <h3 class="member-name">Piyush Patil</h3>
+                    <span class="member-title">Technical Head</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-blue-vp">
+                    <div class="holo-avatar-box ring-blue">
+                        <img loading="lazy" src="assets/members/anshika-sharma.PNG" alt="Anshika Sharma" style="object-position: top;">
+                        <div class="radar-ring blue"></div>
+                    </div>
+                    <h3 class="member-name">Anshika Sharma</h3>
+                    <span class="member-title">Social Media & Marketing Head</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-blue-vp">
+                    <div class="holo-avatar-box ring-blue">
+                        <img loading="lazy" src="assets/members/teerthraj-patil.png" alt="Teerthraj Patil"
+                            style="object-position: top;">
+                        <div class="radar-ring blue"></div>
+                    </div>
+                    <h3 class="member-name">Teerthraj Patil</h3>
+                    <span class="member-title">Social Media & Marketing Head</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-blue-vp">
+                    <div class="holo-avatar-box ring-blue">
+                        <img loading="lazy" src="assets/members/aryan-patil.PNG" alt="Aryan Patil"
+                            style="object-position: center 20%;">
+                        <div class="radar-ring blue"></div>
+                    </div>
+                    <h3 class="member-name">Aryan Patil</h3>
+                    <span class="member-title">Social Media & Marketing Head</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-circuit-sec">
+                    <div class="holo-avatar-box ring-circuit">
+                        <img loading="lazy" src="assets/members/bhargavi-ambi.png" alt="Bhargavi Subhash Ambi"
+                            style="object-position: top;">
+                        <div class="radar-ring circuit"></div>
+                    </div>
+                    <h3 class="member-name">Bhargavi Subhash Ambi</h3>
+                    <span class="member-title">Data Manager</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-circuit-sec">
+                    <div class="holo-avatar-box ring-circuit">
+                        <img loading="lazy" src="assets/members/mrunal-shevade.png" alt="Mrunal Shevade"
+                            style="object-position: center 20%;">
+                        <div class="radar-ring circuit"></div>
+                    </div>
+                    <h3 class="member-name">Mrunal Shevade</h3>
+                    <span class="member-title">Data Manager</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-circuit-sec">
+                    <div class="holo-avatar-box ring-circuit">
+                        <img loading="lazy" src="assets/members/snehal-visapure.png" alt="Snehal Visapure"
+                            style="object-position: top;">
+                        <div class="radar-ring circuit"></div>
+                    </div>
+                    <h3 class="member-name">Snehal Visapure</h3>
+                    <span class="member-title">Data Manager</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="holo-card card-circuit-sec">
+                    <div class="holo-avatar-box ring-circuit">
+                        <img loading="lazy" src="assets/members/bhargavi-pujari.png" alt="Bhargavi Pujari"
+                            style="object-position: center 5%;">
+                        <div class="radar-ring circuit"></div>
+                    </div>
+                    <h3 class="member-name">Bhargavi Pujari</h3>
+                    <span class="member-title">Data Manager</span>
+
+                    <div class="social-bar">
+                        <a href="#" class="s-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="s-icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- JOIN -->
+    <section id="join">
+        <div class="wrap">
+            <div class="gcard join-panel reveal3d">
+                <div class="eyebrow" style="justify-content:center;">Want to see your name here?</div>
+                <h2>Join the core team</h2>
+                <p>Open roles rotate every year across technical, design, and events. Membership is the first step.</p>
+                <a class="btn btn-solid" data-join-link target="_blank" rel="noopener">Join here →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <div class="footer-brand"><a href="index.html"><img src="assets/portal/images/logo.png" alt="ACSES Logo"
+                            style="height:40px; width:auto; border-radius:6px; object-fit:contain;"></a></div>
+                <p class="footer-tagline">Association of Computer Science &amp; Engineering Students — DKTE. Building
+                    students into engineers since 2000.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="about.html">About</a>
+                <a href="events.html">Events</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="members.html">Members</a>
+            </div>
+            <div class="footer-col">
+                <h4>Get involved</h4>
+                <a data-join-link target="_blank" rel="noopener">Join ACSES</a>
+                <a href="contact.html">Contact us</a>
+                <a href="tel:+919055721797"
+                    style="color:var(--circuit); text-decoration:none; display:block; margin-bottom:4px; font-size:12px;">+91
+                    9055721797</a>
+                <a href="tel:+919325324272"
+                    style="color:var(--circuit); text-decoration:none; display:block; margin-bottom:10px; font-size:12px;">+91
+                    9325324272</a>
+                <a href="contact.html#faq">FAQs</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div id="footerSocials"></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>ACSES — Association of Computer Science &amp; Engineering Students</div>
+            <div>© 2026. All rights reserved.</div>
+        </div>
+    </footer>
+    <button class="to-top" id="toTopBtn" aria-label="Back to top">↑</button>
+
+    <script src="data.js"></script>
+    <script src="scene-network.js"></script>
+    <script src="common.js"></script>
+    <script src="page-members.js"></script>
+</body>
+
+</html>
